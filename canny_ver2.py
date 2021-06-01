@@ -11,6 +11,7 @@ import numpy as np
 image = cv2.imread('spawn.jpg')
 # cap = cv2.VideoCapture(0)
 
+print("Press ESC to close")
 # loop runs if capturing has been initialized
 while (1):
 
