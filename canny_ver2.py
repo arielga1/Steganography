@@ -7,8 +7,8 @@ import cv2
 import numpy as np
 
 # capture frames from a camera
-# image = cv2.imread('temple.jpeg')
-image = cv2.imread('spawn.jpg')
+image = cv2.imread('temple.jpeg')
+# image = cv2.imread('spawn.jpg')
 # cap = cv2.VideoCapture(0)
 
 print("Press ESC to close")
