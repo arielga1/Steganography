@@ -47,8 +47,3 @@ while (1):
     if k == 27:
         break
 
-# Close the window
-cap.release()
-
-# De-allocate any associated memory usage
-cv2.destroyAllWindows()
