@@ -26,6 +26,6 @@ Nikolay Babkin - [sunspawn](https://github.com/Sunspawn/)
 
 Ariel Genezya - [arielgel](https://github.com/arielge1)
 
-Michael  - [420Spawn](https://github.com/420Spawn)
+Michael Fuksa - [420Spawn](https://github.com/420Spawn)
 
 Roni Gerkerov - [RonsonGallery](https://github.com/RonsonGallery)
