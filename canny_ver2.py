@@ -7,13 +7,14 @@ import cv2
 import numpy as np
 
 # capture frames from a camera
+# image = cv2.imread('temple_OpenCV.jpeg')
 image = cv2.imread('temple.jpeg')
 # image = cv2.imread('spawn.jpg')
 # cap = cv2.VideoCapture(0)
 
 print("Press ESC to close")
 # loop runs if capturing has been initialized
-while (1):
+while 1:
 
     # # reads frames from a camera
     # ret, frame = cap.read()
@@ -42,6 +43,9 @@ while (1):
 
     # Display edges in a frame
     cv2.imshow('Edges', edges)
+
+    # Save the edges picture
+    cv2.imwrite('edges.jpeg', edges)
 
     # Wait for Esc key to stop
     k = cv2.waitKey(5) & 0xFF
