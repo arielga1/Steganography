@@ -4,19 +4,26 @@ import LsbSteg
 
 import canny_edge_detector
 
+from CaesarCipher import CaesarCipher
 
-message = "This is a hidden flower in an image"
+if __name__ == "__main__":
+        key = 5
 
-imageFilename = "BW-using-curves.jpg"
-img = Image.open(imageFilename)
-detect = canny_edge_detector.cannyEdgeDetector(img)
+        message = "This is a hidden flower in an image"
 
-newImageFilename = "stego_stars_background"
+        encMessage = CaesarCipher.encrypt(message, key)
 
-newImg = LsbSteg.encodeLSB(message, imageFilename, newImageFilename)
-if not newImg is None:
-        print("Stego image created.")
+        imageFilename = "BW-using-curves.jpg"
+        img = Image.open(imageFilename)
+        detect = canny_edge_detector.cannyEdgeDetector(img)
 
-print("Decoding...")
-message = LsbSteg.decodeLSB("stego_stars_background.png")
-print("Final message: ", message)
+        newImageFilename = "stego_stars_background"
+
+        newImg = LsbSteg.encodeLSB(encMessage, imageFilename, newImageFilename)
+        if newImg is not None:
+                print("Stego image created.")
+
+        print("Decoding...")
+        rawMessage = LsbSteg.decodeLSB("stego_stars_background.png")
+        message = CaesarCipher.decrypt(rawMessage, key)
+        print("Final message: ", message)
