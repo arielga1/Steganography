@@ -10,6 +10,7 @@ and
 
 ```bash
 pip install numpy
+pip install pillow/pip install pil
 ```
 
 also requires opencv2
