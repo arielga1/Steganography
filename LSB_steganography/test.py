@@ -5,15 +5,11 @@ import LsbSteg
 import canny_edge_detector
 
 
-
-
-
 message = "This is a hidden flower in an image"
 
 imageFilename = "BW-using-curves.jpg"
 img = Image.open(imageFilename)
-detect = canny_edge_detector()
-detect.img = img
+detect = canny_edge_detector.cannyEdgeDetector(img)
 
 newImageFilename = "stego_stars_background"
 
